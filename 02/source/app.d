@@ -1,16 +1,22 @@
 import std.stdio;
 
 char[] answer() {
-	import std.array : split, array, join;
-	import std.algorithm : map, count;
-	import std.uni : isAlpha;
+	import std.range;
 	import std.conv;
 
-	auto sentence = "Now I need a drink, alcoholic of course, after the heavy lectures involving quantum mechanics.";
+	string str1 = "パトカー";
+	string str2 = "タクシー";
 
-	return sentence.split(" ").map!((w) => w.count!(isAlpha)).array.to!(string[]).join(" ").dup;
-	
+	dchar[] result;
+
+	foreach (c1, c2; zip(str1, str2)) {
+		result ~= c1;
+		result ~= c2;
+	}
+
+	return result.to!(char[]);
 }
+
 void main()
 {
 	writeln(answer());
