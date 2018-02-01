@@ -1,10 +1,8 @@
 import std.stdio;
 
-char[] answer() {
-	import std.algorithm;
-	char[] str = "stressed".dup;
-	reverse(str);
-	return str;
+string answer() {
+	import std.range, std.array, std.conv;
+	return "stressed".retro.array.to!string;
 }
 
 void main()
