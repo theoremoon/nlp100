@@ -1,0 +1,14 @@
+.dub
+docs.json
+__dummy.html
+docs/
+09.so
+09.dylib
+09.dll
+09.a
+09.lib
+09-test-*
+*.exe
+*.o
+*.obj
+*.lst
